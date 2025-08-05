@@ -6,7 +6,7 @@
 <title>Eugene Tutoring - Jadon Schmitt</title>
 
 <style>
-  /* Reset and global styles */
+  /* Reset and global */
   html, body {
     max-width: 100vw;
     overflow-x: hidden;
@@ -16,7 +16,7 @@
       Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
     background: #fff;
     color: #222;
-    line-height: 1.6;
+    line-height: 1.5;
     box-sizing: border-box;
   }
   *, *::before, *::after {
@@ -34,30 +34,34 @@
   header {
     background-color: #004aad;
     color: white;
-    padding: 1.5rem 1rem 1rem 1rem;
+    padding: 1.25rem 1rem 0.5rem 1rem; /* reduced bottom padding */
     text-align: center;
   }
   header h1 {
-    margin: 0 0 0.25rem;
+    margin: 0 0 0.15rem;
     font-weight: 700;
-    font-size: 1.9rem;
-    line-height: 1.2;
+    font-size: 1.8rem;
+    line-height: 1.1;
   }
   header p {
-    margin: 0 0 1rem;
-    font-size: 1.1rem;
+    margin: 0 0 0.5rem;
+    font-size: 1rem; /* smaller subtitle */
     font-weight: 400;
+    white-space: nowrap; /* try no wrap */
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   /* Navigation */
   nav {
-    background-color: #1653cc; /* slightly lighter blue than header */
-    padding: 0.5rem 1rem;
-    border-bottom: 1px solid #0f3b99; /* subtle bottom border */
+    background-color: #1653cc;
+    padding: 0.3rem 1rem;
+    border-bottom: 1px solid #0f3b99;
     display: flex;
     justify-content: center;
-    gap: 2rem;
-    margin-bottom: 2rem; /* space below nav */
+    gap: 1.8rem;
+    margin-bottom: 1.5rem; /* less space below nav */
+    flex-wrap: wrap;
   }
   nav a {
     color: white;
@@ -67,10 +71,11 @@
     padding: 0.25rem 0;
     border-bottom: 2px solid transparent;
     transition: border-color 0.3s;
+    white-space: nowrap; /* prevent wrapping inside links */
   }
   nav a:hover,
   nav a:focus {
-    border-color: white; /* underline on hover/focus */
+    border-color: white;
     outline: none;
   }
 
@@ -168,13 +173,21 @@
 
   /* Responsive tweaks */
   @media (max-width: 500px) {
+    header h1 {
+      font-size: 1.6rem;
+    }
+    header p {
+      font-size: 0.9rem;
+      white-space: normal; /* allow wrapping on tiny screens */
+    }
     nav {
       gap: 1rem;
-      padding: 0.5rem 0.5rem;
+      padding: 0.25rem 0.5rem;
+      margin-bottom: 1rem;
     }
     nav a {
       font-size: 1rem;
-      padding: 0.25rem 0;
+      padding: 0.2rem 0;
     }
     main {
       margin: 0 0 2rem;
