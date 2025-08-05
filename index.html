@@ -1,154 +1,167 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Eugene Tutoring - Jadon Schmitt</title>
 
 <style>
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+      Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    margin: 0;
+    background: #fff;
+    color: #222;
+    line-height: 1.6;
+  }
+  header {
+    background-color: #004aad;
+    color: white;
+    padding: 1.5rem 1rem;
+    text-align: center;
+  }
+  header h1 {
+    margin: 0 0 0.25rem;
+    font-weight: 700;
+  }
+  header p {
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 400;
+  }
+  nav {
+    background: #f7f7f7;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 0.75rem 0;
+    font-weight: 600;
+  }
+  nav a {
+    color: #004aad;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s;
+  }
+  nav a:hover,
+  nav a:focus {
+    color: #002f6c;
+  }
+  main {
+    max-width: 700px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+  }
+  section {
+    margin-bottom: 3rem;
+  }
+  section h2 {
+    border-bottom: 2px solid #004aad;
+    padding-bottom: 0.25rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    font-size: 1.5rem;
+  }
+  p,
+  ul {
+    font-size: 1.1rem;
+    margin-top: 0;
+  }
+  ul {
+    padding-left: 1.2rem;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  label {
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+    display: block;
+  }
+  input[type="text"],
+  input[type="email"],
+  textarea,
+  select {
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    font-family: inherit;
+    font-weight: 400;
+  }
+  textarea {
+    resize: vertical;
+    min-height: 100px;
+  }
+  button {
+    background-color: #004aad;
+    color: white;
+    border: none;
+    padding: 0.75rem 1rem;
+    font-size: 1.1rem;
+    font-weight: 700;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    align-self: flex-start;
+  }
+  button:hover,
+  button:focus {
+    background-color: #002f6c;
+  }
+  footer {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #666;
+    padding: 1rem;
+    border-top: 1px solid #ddd;
+    margin-top: 3rem;
+  }
+  /* Image classes */
   .head {
-    max-width: 450px;
+    max-width: 100%;
     height: auto;
+    display: block;
+    margin: 0 auto 1.5rem auto;
+    max-width: 450px;
   }
   .reviews {
-    max-width: 400px;
+    max-width: 100%;
     height: auto;
+    display: block;
+    margin: 2rem auto 0 auto;
+    max-width: 400px;
   }
-</style>
-
-  
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Eugene Tutoring - Jadon Schmitt</title>
-  <style>
-    /* Reset some default styles */
-    * {
-      box-sizing: border-box;
-    }
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-        Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-      margin: 0;
-      background: #fff;
-      color: #222;
-      line-height: 1.6;
-    }
-    header {
-      background-color: #004aad;
-      color: white;
-      padding: 1.5rem 1rem;
-      text-align: center;
-    }
-    header h1 {
-      margin: 0 0 0.25rem;
-      font-weight: 700;
-    }
-    header p {
-      margin: 0;
-      font-size: 1.1rem;
-      font-weight: 400;
-    }
+  /* Responsive styles */
+  @media (max-width: 500px) {
     nav {
+      flex-direction: row;           /* keep horizontal */
+      justify-content: space-around; /* spread evenly */
+      padding: 1rem;
       background: #f7f7f7;
-      border-bottom: 1px solid #ddd;
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-      padding: 0.75rem 0;
-      font-weight: 600;
     }
     nav a {
-      color: #004aad;
-      text-decoration: none;
       font-size: 1rem;
-      transition: color 0.3s;
-    }
-    nav a:hover,
-    nav a:focus {
-      color: #002f6c;
+      padding: 0.5rem;
+      white-space: nowrap;
+      flex-grow: 1;
+      text-align: center;
     }
     main {
-      max-width: 700px;
-      margin: 2rem auto;
-      padding: 0 1rem;
+      margin: 1rem;
+      padding: 0 0.5rem;
     }
-    section {
-      margin-bottom: 3rem;
-    }
-    section h2 {
-      border-bottom: 2px solid #004aad;
-      padding-bottom: 0.25rem;
-      margin-bottom: 1rem;
-      font-weight: 700;
-      font-size: 1.5rem;
-    }
-    p,
-    ul {
-      font-size: 1.1rem;
-      margin-top: 0;
-    }
-    ul {
-      padding-left: 1.2rem;
-    }
-    form {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-    }
-    label {
-      font-weight: 600;
-      margin-bottom: 0.25rem;
-      display: block;
-    }
-    input[type="text"],
-    input[type="email"],
-    textarea,
-    select {
-      padding: 0.5rem;
-      font-size: 1rem;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      width: 100%;
-      font-family: inherit;
-      font-weight: 400;
-    }
-    textarea {
-      resize: vertical;
-      min-height: 100px;
-    }
-    button {
-      background-color: #004aad;
-      color: white;
-      border: none;
-      padding: 0.75rem 1rem;
-      font-size: 1.1rem;
-      font-weight: 700;
-      border-radius: 4px;
-      cursor: pointer;
-      transition: background-color 0.3s;
-      align-self: flex-start;
-    }
-    button:hover,
-    button:focus {
-      background-color: #002f6c;
-    }
-    footer {
-      text-align: center;
-      font-size: 0.9rem;
-      color: #666;
-      padding: 1rem;
-      border-top: 1px solid #ddd;
-      margin-top: 3rem;
-    }
-    @media (max-width: 500px) {
-      nav {
-        flex-direction: column;
-        gap: 1rem;
-      }
-      main {
-        margin: 1rem;
-      }
-    }
-  </style>
+  }
+</style>
 </head>
+
 <body>
   <header>
     <h1>Eugene Tutoring - Jadon Schmitt</h1>
@@ -163,41 +176,24 @@
     <section id="about">
       <h2>About Me</h2>
 
-      <img src="images/uo_head.PNG" alt="My UO graduation photo" class="head" style="display: block; margin: 0 auto;"/>
-<br/>
-      <p>
-        Hey there, I’m Jadon!
-      </p>
-      <p>
-       I’m a skilled tutor with 4+ years of experience:
-      </p>
+      <img src="images/uo_head.PNG" alt="My UO graduation photo" class="head" />
+      
+      <p>Hey there, I’m Jadon!</p>
+      <p>I’m a skilled tutor with 4+ years of experience:</p>
       <ul>
-      <li>
-       <strong>North Avenue Education:</strong> Tutored SAT/ACT prep at prestigious Portland tutoring company charging ~$200/hour
-      </li>
-      <li>
-       <strong>AmeriCorps:</strong> Taught algebra at Tigard High School
-      </li>     
- <li>
-      <strong>UO Jaqua Center:</strong> Tutored student athletes in college math
-      </li>      
-<li>
-      <strong>Minds Matter:</strong> Volunteered as math tutor and curriculum writer
-      </li>     
+        <li><strong>North Avenue Education:</strong> Tutored SAT/ACT prep at prestigious Portland tutoring company charging ~$200/hour</li>
+        <li><strong>AmeriCorps:</strong> Taught algebra at Tigard High School</li>     
+        <li><strong>UO Jaqua Center:</strong> Tutored student athletes in college math</li>      
+        <li><strong>Minds Matter:</strong> Volunteered as math tutor and curriculum writer</li>     
       </ul>
-<p> 
-        <p>
-        I graduated <i>summa cum laude</i> with a B.S. in mathematics from the University of Oregon and am now a first-year Economics PhD student.
-      </p> <p>
-        I’d love to work with you or your student on high school/college math, as well as SAT, ACT, or GRE prep! I charge $25 for the first hour. 
-      </p> <p>
-        Ready to see if we’re a fit? Fill out a contact form below!  I’m always happy to answer questions over email or the phone.
-      </p>
+      <p>I graduated <i>summa cum laude</i> with a B.S. in mathematics from the University of Oregon and am now a first-year Economics PhD student.</p> 
+      <p>I’d love to work with you or your student on high school/college math, as well as SAT, ACT, or GRE prep! I charge $25 for the first hour.</p> 
+      <p>Ready to see if we’re a fit? Fill out a contact form below! I’m always happy to answer questions over email or the phone.</p>
 
-      <img src="images/9reviews.PNG" alt="Photo of 5-star Google rating" class="reviews"/>
+      <img src="images/9reviews.PNG" alt="Photo of 5-star Google rating" class="reviews" />
     </section>
 
-    <section id=“subjects”>
+    <section id="subjects">
       <h2>Subjects & Pricing</h2>
       <p>I can tutor for any length of time, either in-person or virtually.</p> 
       <p>Hourly rates:</p>
@@ -209,34 +205,27 @@
       </ul>
     </section>
 
-
     <section id="contact">
       <h2>Contact</h2>
-      html
+      <p>Have questions or want to schedule a session? Fill out the form below and I’ll get back to you within one business day!</p>
+      <form action="https://formspree.io/f/myzpnwjz" method="POST">
+        <label for="name">Name *</label>
+        <input type="text" id="name" name="Name" required />
 
-Copy
-<section id="contact">
-  <h2>Contact</h2>
-  <p>Have questions or want to schedule a session? Fill out the form below and I’ll get back to you within one business day!</p>
-  <form action="https://formspree.io/f/myzpnwjz" method="POST">
-    <label for="name">Name *</label>
-    <input type="text" id="name" name="Name" required />
+        <label for="email">Email *</label>
+        <input type="email" id="email" name="Email" required />
 
-    <label for="email">Email *</label>
-    <input type="email" id="email" name="Email" required />
+        <label for="subjects">What subject(s) do you need tutoring for?</label>
+        <input type="text" id="subjects" name="Subjects" />
 
-    <label for="subjects">What subject(s) do you need tutoring for?</label>
-    <input type="text" id="subjects" name="Subjects" />
+        <label for="questions">What questions can I answer for you?</label>
+        <textarea id="questions" name="Questions"></textarea>
 
-    <label for="questions">What questions can I answer for you?</label>
-    <textarea id="questions" name="Questions"></textarea>
-
-    <button type="submit">Send</button>
-  </form>
-</section>
+        <button type="submit">Send</button>
       </form>
     </section>
   </main>
+  
   <footer>
     &copy; 2025 Eugene Math Tutoring. All rights reserved.
   </footer>
