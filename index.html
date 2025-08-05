@@ -23,7 +23,7 @@
     box-sizing: inherit;
   }
 
-  /* Container to center the whole content */
+  /* Container */
   .container {
     max-width: 700px;
     margin: 0 auto;
@@ -34,44 +34,49 @@
   header {
     background-color: #004aad;
     color: white;
-    padding: 1.5rem 0;
+    padding: 1.5rem 1rem 1rem 1rem;
     text-align: center;
   }
   header h1 {
     margin: 0 0 0.25rem;
     font-weight: 700;
+    font-size: 1.9rem;
+    line-height: 1.2;
   }
   header p {
-    margin: 0;
+    margin: 0 0 1rem;
     font-size: 1.1rem;
     font-weight: 400;
   }
 
   /* Navigation */
   nav {
-    background-color: #004aad; /* match header */
-    border-bottom: 1px solid #003375;
+    background-color: #1653cc; /* slightly lighter blue than header */
+    padding: 0.5rem 1rem;
+    border-bottom: 1px solid #0f3b99; /* subtle bottom border */
     display: flex;
     justify-content: center;
     gap: 2rem;
-    padding: 0.75rem 1rem;
-    font-weight: 600;
-    width: 100%;
+    margin-bottom: 2rem; /* space below nav */
   }
   nav a {
     color: white;
     text-decoration: none;
-    font-size: 1rem;
-    transition: color 0.3s;
+    font-weight: 600;
+    font-size: 1.05rem;
+    padding: 0.25rem 0;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.3s;
   }
   nav a:hover,
   nav a:focus {
-    color: #aaddff;
+    border-color: white; /* underline on hover/focus */
+    outline: none;
   }
 
   /* Main content */
   main {
-    margin: 2rem 0;
+    margin: 0 0 3rem;
   }
   section {
     margin-bottom: 3rem;
@@ -92,7 +97,7 @@
     padding-left: 1.2rem;
   }
 
-  /* Image styles */
+  /* Image */
   .head {
     max-width: 100%;
     height: auto;
@@ -107,7 +112,7 @@
     margin: 2rem auto 0 auto;
   }
 
-  /* Form styles */
+  /* Form */
   form {
     display: flex;
     flex-direction: column;
@@ -165,18 +170,14 @@
   @media (max-width: 500px) {
     nav {
       gap: 1rem;
-      padding: 0.75rem 0.5rem;
-      justify-content: space-around;
+      padding: 0.5rem 0.5rem;
     }
     nav a {
       font-size: 1rem;
-      padding: 0.3rem 0;
-      white-space: nowrap;
-      flex-grow: 1;
-      text-align: center;
+      padding: 0.25rem 0;
     }
     main {
-      margin: 1rem 0;
+      margin: 0 0 2rem;
     }
   }
 </style>
@@ -189,7 +190,7 @@
     </header>
     <nav>
       <a href="#about">About Me</a>
-      <a href="#subjects">Subjects & Pricing</a>
+      <a href="#subjects">Subjects &amp; Pricing</a>
       <a href="#contact">Contact</a>
     </nav>
     <main>
@@ -211,7 +212,7 @@
       </section>
 
       <section id="subjects">
-        <h2>Subjects & Pricing</h2>
+        <h2>Subjects &amp; Pricing</h2>
         <p>I can tutor for any length of time, either in-person or virtually.</p> 
         <p>Hourly rates:</p>
         <ul>
